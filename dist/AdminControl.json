@@ -1,0 +1,64 @@
+{
+    "id": "com.corr.admin.test",
+    "version": "0.0.1",
+    "name": "Admin Control",
+    "description": "A colored box",
+    "newInstancePrefix": "AdminControl",
+    "icon": "https://www.sample.com/customwidgets/coloredbox/icon.png",
+    "vendor": "CORR",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "corr-admin-control",
+            "url": "/AdminControl.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {},
+    "methods": {
+        "RunApiQuery": {
+            "description": "Runs an api query and returns the string result",
+            "returnType" : "string",
+            "parameters": [
+                {
+                    "name": "url",
+                    "type": "string",
+                    "description": "full api request url"
+                }
+            ]
+        },
+        "InitializeApi": {
+            "description": "Initialized with necessary properties to run SAC Api's",
+            "parameters": [
+                {
+                    "name": "baseApiUrl",
+                    "type": "string",
+                    "description": "Base Url for the SAC API including the final /"
+                },
+                {
+                    "name": "tokenUrl",
+                    "type": "string",
+                    "description": "Url to get OAuth token."
+                },
+                {
+                    "name": "clientId",
+                    "type": "string",
+                    "description": "ClientId for getting the OAuth token"
+                },
+                {
+                    "name": "clientSecret",
+                    "type": "string",
+                    "description": "Client Secret for getting the OAuth token"
+                }
+            ]
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the Colored Box."
+        }
+    }
+}
